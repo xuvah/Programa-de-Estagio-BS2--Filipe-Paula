@@ -1,0 +1,44 @@
+﻿@model List<Cliente>;
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1>Clientes Cadastrados</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Data de Cadastro
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data_Cad)
+                </td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+
